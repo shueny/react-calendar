@@ -1,0 +1,18 @@
+.cal-calendar-header-container {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+}
+.cal-calendar-header-container span:first-child {
+    margin-right: 12px;
+}
+
+.cal-calendar-header-container div {
+    display: flex;
+    align-items: center;
+}
+
+.cal-calendar-header-title {
+    font-size: 20px;
+    font-weight: 500;
+}

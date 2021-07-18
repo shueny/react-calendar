@@ -1,0 +1,40 @@
+.cal-content-container {
+    margin-top: 1em;
+}
+
+.cal-content-grid .item {
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cal-content-grid-weeks {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cal-content-grid-dates {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+
+.cal-content-grid-dates .item {
+    width: 40px;
+    height: 40px;
+    align-items: center;
+}
+
+.cal-content-grid-dates .item.grey {
+    color: silver;
+}
+
+.cal-content-grid-dates .item.active {
+    background-color: #d40043;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+}
