@@ -11,7 +11,7 @@ jobs:
   build:
     name: Build and deploy gh-pages
     env:
-      MY_SECRET   : ${{secrets.secret_commit}}
+      MY_SECRET   : ${{secrets.SECRET_COMMIT}}
       USER_NAME   : shueny
       USER_EMAIL  : shuen29@gmail.com
       PUBLISH_DIR : ./publish
