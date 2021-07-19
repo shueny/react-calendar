@@ -2,11 +2,12 @@ name: deploy gh-pages
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
   build:
     name: Build and deploy gh-pages
     env:
+      CI: false
       MY_SECRET   : ${{secrets.secret_commit}}
       USER_NAME   : shueny
       USER_EMAIL  : shuen29@gmail.com
