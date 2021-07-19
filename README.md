@@ -28,7 +28,7 @@ Clone this repo (Be sure you delete the .git file, or move the files to your own
 
 =============
 ## Structure
-
+```
 app
 ├── screens
 │   └── App
@@ -49,3 +49,5 @@ app
 │       │       └── index.js
 │       └── index.js
 └── index.js
+```
+
