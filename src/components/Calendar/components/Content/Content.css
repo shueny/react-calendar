@@ -33,8 +33,49 @@
 }
 
 .cal-content-grid-dates .item.active {
+    position: relative;
     background-color: #d40043;
     border-radius: 50%;
     color: white;
     font-weight: bold;
+    z-index: 1;
+}
+
+.cal-content-grid-dates .item.active:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 150%;
+    height: 150%;
+    box-sizing: border-box;
+    margin-left: 0;
+    margin-top: 0;
+    border-radius: 45px;
+    background-color: rgba(212, 0, 67, 0.5);
+    -webkit-animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1)
+        infinite;
+    animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+    z-index: 0;
+}
+
+@keyframes pulse-ring {
+    0% {
+        transform: scale(0.33);
+    }
+    80%,
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes pulse-dot {
+    0% {
+        transform: scale(0.8);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.8);
+    }
 }

@@ -7,6 +7,15 @@
     margin: 0 auto;
 }
 
+.cal-calendar-grid .item-clickable {
+    cursor: pointer;
+}
+
+.cal-calendar-grid .item-clickable:hover {
+    cursor: pointer;
+    background-color: #ededed;
+}
+
 .cal-month-grid {
     display: flex;
     flex-wrap: wrap;

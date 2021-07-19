@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     height: 40px;
+    margin-bottom: 1em;
 }
 
 .cal-calendar-header-container span:first-child {
@@ -15,10 +16,6 @@
     justify-content: center;
     border-radius: 4px;
     cursor: pointer;
-}
-
-.cal-calendar-header-title-container:hover {
-    background-color: darkgrey;
 }
 
 .cal-calendar-header-title {

@@ -33,6 +33,9 @@ const Index = (props) => {
     const [month, setMonth] = useState(now.getMonth());
     const [week, setWeek] = useState(now.getDay());
     const [date, seDate] = useState(now.getDate());
+    const [current, setCurrent] = useState(
+        new Date(now.getFullYear(), now.getMonth(), 1)
+    );
     const [currnetMonth, setCurrnetMonth] = useState(
         new Date(now.getFullYear(), now.getMonth(), 1).getMonth()
     );
@@ -58,10 +61,10 @@ const Index = (props) => {
     const [changeState, setChangeState] = useState("date");
 
     const fetchDates = async (dates, targetDate, isCurrent) => {
-        console.log("fetchDate:", dates, targetDate);
+        // console.log("fetchDate:", dates, targetDate);
         let arr = [];
         for (let i = dates; i <= targetDate; i++) {
-            console.log(i, dates, targetDate);
+            // console.log(i, dates, targetDate);
             arr.push({ isCurrent, value: i });
         }
         return arr;
@@ -126,6 +129,7 @@ const Index = (props) => {
             newLastMonthLastDay: new Date(year, value, 0).getDate(),
         };
 
+        setCurrent(new Date(year, value, 1));
         setCurrnetMonth(value);
         setCurrnetMonthFirstDay(new Date(year, value, 1).getDate());
         setCurrnetMonthFirstDayOfWeek(new Date(year, value, 1).getDay());
@@ -147,6 +151,8 @@ const Index = (props) => {
                     year={year}
                     onChangeState={hanleChangeState}
                     onChangeMonth={handleChangeMonth}
+                    current={current}
+                    state={changeState}
                 />
                 {changeState === "date" && (
                     <Content
@@ -177,7 +183,7 @@ const MonthElement = (props) => {
             {months.map((el, i) => {
                 return (
                     <div
-                        className="item"
+                        className="item item-clickable"
                         key={`month-${el}`}
                         onClick={() => onChange(i)}>
                         {el}
