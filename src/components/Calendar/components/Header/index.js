@@ -13,7 +13,7 @@ const Index = (props) => {
             <div className="cal-calendar-header-container">
                 <button onClick={ () => onChangeMonth(month - 1) }>
                     <FontAwesomeIcon icon={ faAngleLeft } /></button>
-                <div onClick={ () => onChangeState(month && year ? 'month' : 'year') }>
+                <div className="cal-calendar-header-title-container" onClick={ () => onChangeState(month && year ? 'month' : 'year') }>
                     <span className='cal-calendar-header-title'>{ monthFormat[month] }</span>
                     <span className='cal-calendar-header-title'>{ year }</span>
                 </div>

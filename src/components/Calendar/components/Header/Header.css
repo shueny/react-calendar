@@ -3,13 +3,22 @@
     justify-content: space-between;
     height: 40px;
 }
+
 .cal-calendar-header-container span:first-child {
     margin-right: 12px;
 }
 
-.cal-calendar-header-container div {
+.cal-calendar-header-title-container {
+    width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cal-calendar-header-title-container:hover {
+    background-color: darkgrey;
 }
 
 .cal-calendar-header-title {
