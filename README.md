@@ -1,7 +1,7 @@
 # React-Calendar
 
 =============
-# Getting started
+## Getting started
 
 [Download](https://github.com/shueny/react-calendar/archive/refs/heads/main.zip) the master branch
 
